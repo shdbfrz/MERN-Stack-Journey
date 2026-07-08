@@ -1,0 +1,48 @@
+07/07/2026
+Topics Covered
+
+"HTML Forms
+Input Element
+* Introduction to the input tag
+* type attribute
+* accept attribute
+* File input (type=""file"")
+* Date and time input
+* Number input
+* min and max attributes
+* Image input (type=""image"")
+* Range input (type=""range"")
+* URL input (type=""url"")
+Button Element
+* Introduction to the button tag
+* Button types:
+* Submit
+* Reset
+* Button
+Form Element
+* Introduction to the form tag
+* Form attributes
+* method attribute
+* GET method
+* POST method
+* name attribute
+Textarea Element
+* Creating multi-line text input fields
+Common Form Attributes
+* required
+* placeholder
+* readonly
+* disabled
+* novalidate
+* autocomplete
+Introduction to CSS
+* Introduction to Cascading Style Sheets (CSS)
+* Importance of CSS in web development
+* Advantages of using CSS
+* Basic CSS syntax (Selector, Property, and Value)
+* Types of CSS:
+* Inline CSS
+* Internal CSS
+* External CSS
+* Linking an external CSS file to an HTML document
+* Applying basic text and background styles using CSS"

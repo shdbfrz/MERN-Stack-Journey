@@ -1,0 +1,42 @@
+08/07/2026
+
+Topics Covered 
+
+CSS Selectors
+* Introduction to CSS Selectors
+* Different Types of Selectors
+* Tag Selector
+* Multiple (Grouping) Selector
+* Class Selector
+* Multiple Classes on a Single Element
+* ID Selector
+CSS Text Properties
+* Color
+* Text Align
+* Text Transform
+* Text Decoration
+* Text Indent
+* Line Height
+* Font Family
+* Font Size
+* Font Style
+CSS Background
+* Background Color
+* Background Image
+* Linear Gradient
+CSS Border & Box Model
+* Border Properties
+* Border Width
+* Border Style
+* Border Color
+* Border Radius
+* CSS Box Model
+* Content, Padding, Border & Margin
+* Individual Top, Right, Bottom & Left Margin/Padding
+CSS Display
+* Block-Level Elements
+* Inline Elements
+* Display Property
+* display: none
+ CSS Effects
+* Text Shadow
