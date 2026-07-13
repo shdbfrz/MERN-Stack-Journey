@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: navy
+        
+         }
+
+          nav > ul{
+            background-color:navy;
+            
+          }
+        nav> img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        nav > ul > li {
+            display: inline-block;
+            margin: 10px;
+            padding:10 px;
+        
+        }
+        nav > ul   a {
+            text-decoration: none;
+            color: rgba(247, 5, 17, 0.882);
+            background-color: rgb(206, 200, 202);
+            
+            @media screen and (min-width: 768px ) and (max-width: 1024px ) {
+               nav{
+            
+                align-items: center;
+               }
+             
+    </style>
+</head>
+<body>
+    
+ <nav>
+     <img src="/images/images.jpg" alt="Logo">
+
+        <ul>
+          <li> <a href="" > link 1 </a></li>
+          <li> <a href="" > link 2 </a></li>
+          <li> <a href="" > link 3 </a></li>
+          <li> <a href="" > link 4 </a></li>
+          <li> <a href="" > link 5 </a></li>
+
+
+
+        </ul>
+
+ </nav>
+
+
+
+</body>
+</html>

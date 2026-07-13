@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+   .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap
+        /* flex-direction: row-reverse; */
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        border: 1px solid rgb(226, 12, 12);
+        font-size: 20px;
+    }
+      
+    .container > div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgb(10, 212, 57);
+        text-align: center;
+        margin: 10px;
+    }
+
+
+    .container > div:nth-child(1) {
+        background-color: rgb(188, 23, 23);
+    }
+    .container > div:nth-child(2) {
+        background-color: rgb(23, 188, 23);
+    }
+    .container > div:nth-child(3) {
+        background-color: rgb(20, 20, 218);
+    }
+    .container > div:nth-child(4) {
+        background-color: rgb(188, 23, 188);
+    }
+    .container > div:nth-child(5) {
+        background-color: rgb(188, 188, 23);
+    }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+         <div id="d1">mydiv1</div>
+         <div id="d2">mydiv2</div>
+         <div id="d3">mydiv3</div>
+         <div id="d4">mydiv4</div>
+         <div id="d5">mydiv5</div>
+         
+         
+    </div>
+
+
+
+</body>
+</html>
