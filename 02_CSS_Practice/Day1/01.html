@@ -1,20 +1,226 @@
+
+<!--
+====================== CSS (Cascading Style Sheets) ======================
+
+CSS = Cascading Style Sheets
+
+Purpose:
+→ HTML elements ko style (Design) dene ke liye use hoti hai.
+
+CSS se hum control kar sakte hain:
+✔ Color
+✔ Background
+✔ Font
+✔ Margin
+✔ Padding
+✔ Border
+✔ Width & Height
+✔ Position
+✔ Animation
+✔ Responsive Design
+
+--------------------------------------------------------------------------
+
+There are 3 Types of CSS
+
+1. Inline CSS
+----------------
+CSS directly HTML tag ke andar likhi jati hai.
+
+Syntax:
+
+<p style="color:red;">Hello</p>
+
+Advantages:
+✔ Simple
+✔ Quick Testing
+
+Disadvantages:
+✘ Sirf ek element par apply hoti hai.
+✘ Reuse nahi kar sakte.
+✘ Maintain karna difficult hota hai.
+
+--------------------------------------------------------------------------
+
+2. Internal CSS
+----------------
+CSS HTML file ke <head> section me <style> tag ke andar likhi jati hai.
+
+Syntax:
+
+<head>
+
+<style>
+
+p{
+    color:red;
+}
+
+</style>
+
+</head>
+
+Advantages:
+✔ Ek hi page ke multiple elements par apply hoti hai.
+✔ External file ki zarurat nahi.
+
+Disadvantages:
+✘ Sirf current page ke liye.
+✘ Multiple pages me reuse nahi kar sakte.
+
+--------------------------------------------------------------------------
+
+3. External CSS ⭐ (Most Used)
+------------------------------
+CSS alag .css file me likhte hain.
+
+Example:
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+Advantages:
+✔ Multiple webpages me use kar sakte hain.
+✔ Code reusable hota hai.
+✔ Easy maintenance.
+✔ Professional projects me isi ka use hota hai.
+
+Disadvantages:
+✘ Extra CSS file load hoti hai.
+
+--------------------------------------------------------------------------
+
+CSS Priority (Highest → Lowest)
+
+1. Inline CSS
+2. Internal CSS
+3. External CSS
+
+Example:
+
+Inline CSS
+↓
+
+Internal CSS
+↓
+
+External CSS
+
+Agar same property teen jagah likhi ho,
+to Inline CSS sabse pehle apply hogi.
+
+--------------------------------------------------------------------------
+
+Best Practice
+
+✔ Small Testing
+→ Inline CSS
+
+✔ Single Webpage
+→ Internal CSS
+
+✔ Real Project / MERN / ReactA
+→ External CSS
+
+======================================================================
+-->
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- head = Webpage ki metadata aur external resources yaha likhe jate hain.
+         User ko directly visible nahi hota.
+    -->
+
     <meta charset="UTF-8">
+    <!-- UTF-8 = Sabhi languages aur special characters ko support karta hai. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive Design ke liye use hota hai.
+         Mobile aur Tablet par webpage properly scale hota hai.
+    -->
+
     <title>Document</title>
+    <!-- Browser tab me dikhne wala title. -->
+
+
+
     <link rel="stylesheet" href="style.css">
+    <!-- link = External file ko HTML se connect karta hai.
+
+         rel="stylesheet"
+         → Browser ko batata hai ki ye CSS Stylesheet hai.
+
+         href="style.css"
+         → CSS file ka path.
+
+         CSS file ko hamesha <head> section ke andar add karte hain,
+         taaki page load hone se pehle styling apply ho jaye.
+
+         Example:
+
+         <head>
+             <link rel="stylesheet" href="style.css">
+         </head>
+    -->
+
+
+
+    <!-- JavaScript File bhi generally body ke end me add ki jati hai.
+
+         Example:
+
+         <body>
+
+             ............
+
+             <script src="script.js"></script>
+
+         </body>
+
+         Kyu?
+
+         Taaki pehle HTML load ho jaye,
+         uske baad JavaScript execute ho.
+
+         Note:
+         Agar script ko <head> me use karna ho,
+         to 'defer' attribute use karte hain.
+
+         Example:
+
+         <script src="script.js" defer></script>
+    -->
+
 </head>
+
 <body>
-    
 
+    <p style="background-color: lightgray;">
+        In this practical we will learn about the CSS properties and how to use them in our HTML document.
+    </p>
 
+    <!-- p = Paragraph Tag.
 
-    
-    <p style="background-color: lightgray;">In this practical we will learn about the CSS properties and how to use them in our HTML document.</p>
+         style=""
+         → Inline CSS.
 
+         Sirf isi element par CSS apply hoti hai.
 
+         background-color
+         → Element ka background color set karta hai.
+
+         lightgray
+         → CSS Color Name.
+    -->
 
 </body>
 </html>

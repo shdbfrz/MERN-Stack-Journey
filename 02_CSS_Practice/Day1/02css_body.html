@@ -1,136 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+    <!-- UTF-8
+         → Sabhi Languages aur Special Characters support karta hai.
+    -->
+
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport
+         → Mobile aur Tablet me webpage ko responsive banata hai.
+
+         width=device-width
+         → Screen ki actual width use karega.
+
+         initial-scale=1.0
+         → Page ka initial zoom 100%.
+    -->
+
     <title>Document</title>
+    <!-- Browser Tab me dikhne wala Title -->
+
+
+
     <style type="text/css">
-        body {
+    <!-- style
+         → Internal CSS likhne ke liye use hota hai.
 
-            /* background: linear-gradient(to right top, rgb(157, 24, 24), rgb(212, 36, 36)); */
-          /* background-color: rgb(158, 32, 32);*/
-
-             /* background-color: red; */
-             
-             background-image: url(../html\ practice/images/images.jpg);
-
-              background-repeat: no-repeat;
-              background-size: cover;
-              /* background-position: center; */
-              background-attachment: fixed;
-              /* background-position: bottom right; */
-              /* background-position: 50%, 50%; */
-              background-position: center center;
-            /* background-position: 100px 300px; */
-              /* background-blend-mode: multiply; */
-              background-size: cover;
-              /* background-size: 100% 100%; */
-              background-size: 100vw 100vh;
-
-
-        }
-          
+         type="text/css"
+         → Browser ko batata hai ki ye CSS code hai.
+         HTML5 me optional hai.
+    -->
 
 
 
+        body{
+
+        /* body
+           → Pure webpage ke Body section par CSS apply hogi.
+        */
 
 
+
+        /* ==========================================================
+                    BACKGROUND SHORTHAND PROPERTY
+           ========================================================== */
+
+        /* background:
+           → Shorthand Property.
+
+           Ek hi line me likh sakte hain:
+
+           background-color
+
+           background-image
+
+           background-repeat
+
+           background-position
+
+           background-size
+
+           background-attachment
+
+           Example
+
+           background:red url(image.jpg)
+           no-repeat center/cover fixed;
+        */
+
+
+
+        /* ==========================================================
+                    LINEAR GRADIENT
+           ========================================================== */
+
+        /* background:
+        linear-gradient(
+            to right top,
+            rgb(157,24,24),
+            rgb(212,36,36)
+        );
+        */
+
+        /* linear-gradient()
+
+           Do ya usse jyada colors ko smoothly mix karta hai.
+
+           to right top
+
+           Matlab
+
+           Gradient Bottom Left
+                    ↓
+                 Top Right
+
+           rgb()
+
+           RGB Color Format
+
+           Red
+           Green
+           Blue
+
+           Range
+
+           0 - 255
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND COLOR
+           ========================================================== */
+
+        /* background-color:
+           rgb(158,32,32);
+        */
+
+        /* background-color
+
+           Background ka Color set karta hai.
+
+           Color likhne ke common tarike
+
+           red
+
+           #ff0000
+
+           rgb()
+
+           hsl()
+        */
+
+
+
+        /* background-color:red; */
+
+        /* red
+           → CSS Color Name
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND IMAGE
+           ========================================================== */
+
+        background-image:
+        url("../images/images.jpg");
+
+        /* background-image
+
+           Background me Image lagata hai.
+
+           url()
+
+           Image ka Path batata hai.
+
+           ../
+
+           Current Folder se
+           ek Folder bahar jana.
+
+           Example
+
+           CSS Folder
+
+              style.css
+
+           Images Folder
+
+              image.jpg
+
+           ../images/image.jpg
+
+           Best Practice
+
+           Forward Slash (/)
+
+           Use karo.
+
+           Backslash (\)
+
+           Avoid karo.
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND REPEAT
+           ========================================================== */
+
+        background-repeat:no-repeat;
+
+        /* background-repeat
+
+           Background Image repeat hogi ya nahi.
+
+           repeat
+
+           → Horizontal + Vertical
+
+           repeat-x
+
+           → Sirf Horizontal
+
+           repeat-y
+
+           → Sirf Vertical
+
+           no-repeat
+
+           → Sirf Ek Image
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND SIZE
+           ========================================================== */
+
+        background-size:cover;
+
+        /* background-size
+
+           Background Image ka Size.
+
+           cover
+
+           → Puri Screen Cover karega.
+
+           Image Crop ho sakti hai.
+
+           contain
+
+           → Puri Image dikhegi.
+
+           Crop nahi hogi.
+
+           Lekin empty space aa sakta hai.
+        */
+                /* ==========================================================
+                    BACKGROUND POSITION
+           ========================================================== */
+
+        /* background-position:center; */
+
+        /* background-position
+
+           Background Image ki Position set karta hai.
+
+           Common Values
+
+           left
+
+           right
+
+           top
+
+           bottom
+
+           center
+        */
+
+
+
+        background-position:center center;
+
+        /* center center
+
+           Pehla center
+           → Horizontal Center (X-axis)
+
+           Dusra center
+           → Vertical Center (Y-axis)
+
+           Matlab image webpage ke bilkul center me hogi.
+        */
+
+
+
+        /* background-position:bottom right; */
+
+        /* bottom right
+
+           Image Bottom Right Corner me dikhai degi.
+        */
+
+
+
+        /* background-position:50% 50%; */
+
+        /* Percentage me bhi position set kar sakte hain.
+
+           50%
+           → Horizontal Center
+
+           50%
+           → Vertical Center
+        */
+
+
+
+        /* background-position:100px 300px; */
+
+        /* Pixels me bhi position de sakte hain.
+
+           100px
+           → Left se Distance
+
+           300px
+           → Top se Distance
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND ATTACHMENT
+           ========================================================== */
+
+        background-attachment:fixed;
+
+        /* background-attachment
+
+           Background Scroll hone par
+           kaise behave karegi.
+
+           fixed
+           → Image apni jagah fix rahegi.
+
+           scroll
+           → Default Value.
+
+           local
+           → Element ke saath scroll hogi.
+        */
+
+
+
+        /* ==========================================================
+                    BACKGROUND BLEND MODE
+           ========================================================== */
+
+        /* background-blend-mode:multiply; */
+
+        /* background-blend-mode
+
+           Background Color aur
+           Background Image ko mix karta hai.
+
+           Common Values
+
+           multiply
+
+           screen
+
+           overlay
+
+           darken
+
+           lighten
+        */
+
+
+
+        /* ==========================================================
+                    VIEWPORT WIDTH & HEIGHT
+           ========================================================== */
+
+        background-size:100vw 100vh;
+
+        /* vw = Viewport Width
+
+           Browser Window ki Width.
+
+           100vw
+           → Puri Browser Width.
+
+           vh = Viewport Height
+
+           Browser Window ki Height.
+
+           100vh
+           → Puri Browser Height.
+
+           Isliye Image Full Screen cover karegi.
+        */
+
+
+
+        /* background-size:100% 100%; */
+
+        /* Width =100%
+
+           Height =100%
+
+           Image Stretch bhi ho sakti hai.
+        */
+
+    }
 
     </style>
+
 </head>
+
 <body>
-    
-    
-    
-    <p >
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
-        In this practical we will learn about the CSS properties and how to use them in our HTML document. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsu
-       
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem                                                
+
+    <p>
+
+        In this practical we will learn about the CSS properties and how to use them in our HTML document.
+
     </p>
 
+    <!-- p
+         → Paragraph Tag.
 
+         Ye webpage par normal text dikhane ke liye use hota hai.
+    -->
 
+    <!--
+        Agar CSS nahi likhenge
+        to Browser Default Styling apply karega.
+
+        Ye Paragraph body ki Background Image ke upar show hoga.
+    -->
 
 </body>
+
 </html>

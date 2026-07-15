@@ -1,70 +1,230 @@
-<!-- padding is **space btw content and container** 
- there are 4 types of padding
- padding top, padding right, padding bottom, padding left -->
+<!--
+======================================================================
+                    PADDING
+======================================================================
 
- <!-- margin is **space btw container and next element**
-  margin top, margin right, margin bottom, margin left -->
+Padding = Content aur Border ke beech ka space.
+
+Padding box ke andar hoti hai.
+
+There are 4 Types of Padding
+
+padding-top
+→ Upar space deta hai.
+
+padding-right
+→ Right side space deta hai.
+
+padding-bottom
+→ Neeche space deta hai.
+
+padding-left
+→ Left side space deta hai.
+
+Shorthand:
+
+padding:20px;
+
+→ Sabhi sides par 20px
+
+padding:10px 20px;
+
+→ Top-Bottom =10px
+→ Left-Right =20px
+
+padding:10px 20px 30px 40px;
+
+→ Top Right Bottom Left
+======================================================================
+-->
 
 
 
+<!--
+======================================================================
+                        MARGIN
+======================================================================
 
+Margin = Do Elements (Containers) ke beech ka space.
+
+Margin box ke bahar hoti hai.
+
+There are 4 Types of Margin
+
+margin-top
+→ Upar space.
+
+margin-right
+→ Right side space.
+
+margin-bottom
+→ Neeche space.
+
+margin-left
+→ Left side space.
+
+Shorthand:
+
+margin:20px;
+
+→ Sabhi sides par 20px
+
+margin:10px 20px;
+
+→ Top-Bottom =10px
+→ Left-Right =20px
+
+margin:10px 20px 30px 40px;
+
+→ Top Right Bottom Left
+======================================================================
+-->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- UTF-8 Character Encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CSS Properties</title>
+
     <style>
+
+        /* ==========================================================
+                            Paragraph Styling
+        ========================================================== */
+
         p {
-        color: red;
-        line-height: 1.5;
-        background-color: lightgray;
-        text-align: center;
-        text-decoration: underline;
-        text-indent: 20px;
-        font-size: 20px;
-        font-family: arial,;
-        font-style: italic;
-        font-style: jokerman;
-        /* font-family: "Times New Roman", Times, serif; */
-        /* font-weight: bold; */
-        /* font-variant: small-caps; */
 
+            color: red;
+            /* Text Color */
 
+            line-height: 1.5;
+            /* Line ke beech ka vertical space */
 
+            background-color: lightgray;
+            /* Paragraph Background Color */
+
+            text-align: center;
+            /* Text ko Center me align karta hai */
+
+            text-decoration: underline;
+            /* Text ke niche underline lagata hai */
+
+            text-indent: 20px;
+            /* Paragraph ki first line ko 20px se start karta hai */
+
+            font-size: 20px;
+            /* Text Size */
+
+            font-family: Arial;
+            /* Font Family */
+
+            font-style: italic;
+            /* Text ko Italic banata hai */
+
+            /* font-family: "Times New Roman", Times, serif; */
+            /* Dusra Font Example */
+
+            /* font-weight: bold; */
+            /* Text ko Bold karta hai */
+
+            /* font-variant: small-caps; */
+            /* Small Capital Letters */
 
         }
+
+
+
+        /* ==========================================================
+                            Heading 1 Styling
+        ========================================================== */
+
         h1 {
-        color: white;
-        background-color: navy;
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 100px;
-    
 
+            color: white;
+            /* Text Color */
+
+            background-color: navy;
+            /* Background Color */
+
+            text-align: center;
+            /* Center Alignment */
+
+            text-transform: uppercase;
+            /* Saare letters Capital ho jayenge */
+
+            line-height: 100px;
+            /* Line ki Height */
 
         }
+
+
+
+        /* ==========================================================
+                            Heading 2 Styling
+        ========================================================== */
 
         h2 {
-         /* text-shadow: -2px 2px 10px gray; */
-         text-shadow: 
-         2px 2px 5px navajowhite;
 
+            /* text-shadow:-2px 2px 10px gray; */
 
-        text-align: center;
-        
-        line-height: 50px;
-    
+            text-shadow: 2px 2px 5px navajowhite;
 
+            /* text-shadow
 
+               Syntax
+
+               Horizontal Vertical Blur Color
+
+               2px
+               → Right
+
+               2px
+               → Bottom
+
+               5px
+               → Blur Radius
+
+               navajowhite
+               → Shadow Color
+            */
+
+            text-align: center;
+            /* Center Alignment */
+
+            line-height: 50px;
+            /* Line Height */
+
+        }
 
     </style>
+
 </head>
+
 <body>
-    
-<h1 >CSS page </h1>
-<h2>Introduction to CSS</h2>
-    <p>In this practical we will learn about the CSS properties and how to use them in our HTML document.</p>
+
+    <h1>CSS Page</h1>
+
+    <!-- Main Heading -->
+
+    <h2>Introduction to CSS</h2>
+
+    <!-- Sub Heading -->
+
+    <p>
+
+        In this practical we will learn about the CSS properties and how to use them in our HTML document.
+
+    </p>
+
+    <!-- Paragraph -->
+
 </body>
+
 </html>
