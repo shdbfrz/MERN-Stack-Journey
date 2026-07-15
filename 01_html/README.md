@@ -1,6 +1,6 @@
 # 📄 HTML Revision Notes
 
-This folder contains my HTML practice files with detailed comments for quick revision and interview preparation.
+Revision Of HTML
 
 ---
 
