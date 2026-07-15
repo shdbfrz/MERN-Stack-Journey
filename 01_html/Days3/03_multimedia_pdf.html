@@ -5,12 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
 
-<object data="../Multimedia/GATE Notes - Calculus.pdf" type="application/pdf" width="100%" height="1000px">
+    <object
+        data="../Multimedia/GATE Notes - Calculus.pdf"
+        type="application/pdf"
+        width="100%"
+        height="1000px">
 
-</object>
+    <!-- object = External resource (PDF, HTML, Image, Audio, Video, etc.)
+         ko webpage ke andar embed (display) karne ke liye use hota hai.
+
+         Ye browser ke support ke according resource ko render karta hai.
+    -->
+
+    <!--
+         data
+         → External file ka path ya URL.
+
+         Yaha:
+         "../Multimedia/GATE Notes - Calculus.pdf"
+
+         Browser is PDF file ko webpage ke andar load karega.
+    -->
+
+    <!--
+         type="application/pdf"
+
+         type = MIME Type (Multipurpose Internet Mail Extensions)
+
+         Browser ko batata hai ki file kis type ki hai.
+
+         application/pdf
+         → PDF Document
+
+         Kuch common MIME Types:
+
+         text/html          → HTML File
+         image/jpeg         → JPG Image
+         image/png          → PNG Image
+         audio/mpeg         → MP3 Audio
+         video/mp4          → MP4 Video
+         application/pdf    → PDF File
+    -->
+
+    <!--
+         width="100%"
+
+         PDF viewer parent container ki
+         poori width cover karega.
+    -->
+
+    <!--
+         height="1000px"
+
+         PDF viewer ki height 1000px hogi.
+    -->
+
+    </object>
 
 </body>
 </html>

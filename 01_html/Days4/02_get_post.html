@@ -1,204 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
 
-    <form  method="post" novalidate  autocomplete="off">
-    <table  align="center" border="3" width="500px" >
-          <tbody >
-           <tr>
+  <form method="post" novalidate autocomplete="off">
+    <!-- form = User ka data collect karke server ko bhejne ke liye use hota hai.
 
-            <td>
-             Enter your name:
-            </td>
-               <td>
-                 <input type="text" name ="name" required minlength="3" maxlength="20" value="shadab"  readonly>
-               </td>  </tr> 
-               <tr>
-              <td>
-                 enter the password:
-              </td>
-              <td>
-                 
-                <input type="password" name="pwd" required minlength="6" maxlength="20" placeholder="Shad@123">
-              </td>  </tr>
-              <tr>
-            <td>
+         method="post"
+         → Form data HTTP POST Method se server ko bhejega.
+         → Data URL me visible nahi hota.
 
-             Date of birth:
-            </td>
-               <td>
-                 <input type="date" name="dob" min="2026-05-25" max="2026-06-25" required>
-               </td>
-              </tr>
-             <tr>
+         method ke do common types:
+         GET  → Data URL me dikhta hai.
+         POST → Data Request Body me jata hai.
 
-            <td>
-             Enter your Mobile number:
-            </td>
-               <td>
-                 <input type="number" name="mobile" required value="1234567890" disabled>
-               </td>  </tr> 
+         novalidate
+         → Browser ki default validation ko disable kar deta hai.
 
-            <tr>
+         autocomplete="off"
+         → Browser purane saved values automatically fill nahi karega.
+    -->
 
-            <td>
-             Enter your Email:
-            </td>
-               <td>
-                 <input type="email" name="email" required>
-               </td>  </tr> 
+    <table align="center" border="3" width="500px">
+      <!-- table = Form ko arrange karne ke liye use ki gayi hai.
 
-           <tr>
+             align="center"
+             → Table ko center me rakhta hai. (Deprecated)
 
-            <td>
-             Enter your gender:
-            </td>
-               <td>
-                 <input type="radio" name="gen" id="male"/>
-                 <label for="male"> Male</label>
-                 <input type="radio" name="gen" id="female"/>
-                 <label for="female"> Female</label>
-                 <input type="radio" name="gen" id="other"/>
-                 <label for="other"> Other</label>
-                
-               </td>  </tr> 
+             border="3"
+             → Border thickness.
 
-          <tr>
+             width="500px"
+             → Table ki fixed width.
+        -->
 
-            <td>
-             Enter your Qualification:
-            </td>
-               <td>
-                 <select>
-                    <option disabled selected >Select your Qualification</option>
-                    <option value="bca">BCA</option>
-                    <option value="bsc">BSC</option>
-                    <option selected value="B.Tech">B.Tech</option>
-                    <option value="mba">MBA</option>
-                    <option disabled value="mca">MCA</option>
-                 </select>
-            </td>
-            </tr>
-            <tr>
-            <td>
-             university
-            </td>
-               <td>
-                 <select>
-                    <option disabled selected >Select your university</option>
-                    <option value="Aktu">AKTU</option>
-                    <option value="Jnu">JNU</option>
-                    <option selected value="Iit">IIT</option>
-                    <option value="Nit">NIT</option>
-                    <option disabled value="HBTU">HBTU</option>
-                 </select>
+      <tbody>
 
-
-               </td>  </tr> 
-
-
-            <tr>
-                <td>
-                    Hobbies:
-                </td>
-                <td> 
-    
-                    <input type="checkbox" name="hobby" id="cricket"/>
-                    <label for="cricket"> Cricket</label>
-                    <input type="checkbox" name="hobby" id="football"/>
-                    <label for="football"> Football</label>
-                    <input type="checkbox" name="hobby" id="chess"/>
-                    <label for="chess"> Chess</label>
-            
-                </td>
-            </tr>
-
-               
-
-          
-               <tr>
-                  <td>
-                    update your file:
-                  </td>
+        <tr>
 
           <td>
-             
-            <input name="profilePic" type="file" accept=".jpg, .jpeg, .png"/>
+
+            Enter your name:
+
           </td>
-               <tr>
-                  <td>
-                    hidden value:
-                  </td>
 
           <td>
-             
-            <input name="hiddenValue" type="hidden"  value="12345"/>
+
+            <input type="text" name="name" required minlength="3" maxlength="20" value="shadab" readonly>
+
+            <!-- type="text"
+                             → Normal Text Input.
+
+                             name="name"
+                             → Form submit hone par backend ko
+                               "name" key ke naam se data bheja jayega.
+
+                             required
+                             → Field compulsory hai.
+
+                             minlength="3"
+                             → Minimum 3 characters.
+
+                             maxlength="20"
+                             → Maximum 20 characters.
+
+                             value="shadab"
+                             → Default value.
+
+                             readonly
+                             → User value dekh sakta hai
+                               lekin change nahi kar sakta.
+
+                             Difference:
+
+                             readonly
+                             ✔ Value submit hoti hai.
+
+                             disabled
+                             ✘ Value submit nahi hoti.
+                        -->
+
           </td>
-               <tr>
-                  <td>
-                    range:
-                  </td>
+
+        </tr>
+
+
+
+        <tr>
+
           <td>
-             
+
+            Enter the Password:
+
+          </td>
+
+          <td>
+
+            <input type="password" name="pwd" required minlength="6" maxlength="20" placeholder="Shad@123">
+
+            <!-- type="password"
+                             → Password hide karta hai.
+
+                             placeholder
+                             → Hint text dikhata hai.
+
+                             User type karna start karega
+                             to placeholder gayab ho jayega.
+
+                             required
+                             → Password compulsory hai.
+
+                             minlength
+                             → Minimum password length.
+
+                             maxlength
+                             → Maximum password length.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Date of Birth:
+
+          </td>
+
+          <td>
+
+            <input type="date" name="dob" min="2026-05-25" max="2026-06-25" required>
+
+            <!-- type="date"
+                             → Calendar Picker.
+
+                             name="dob"
+                             → Backend ko "dob" key milegi.
+
+                             min
+                             → Is date se pehle date select nahi hogi.
+
+                             max
+                             → Is date ke baad date select nahi hogi.
+
+                             required
+                             → Date select karna compulsory hai.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Enter your Mobile Number:
+
+          </td>
+
+          <td>
+
+            <input type="number" name="mobile" required value="1234567890" disabled>
+
+            <!-- type="number"
+                             → Numeric Input.
+
+                             value
+                             → Default value.
+
+                             disabled
+                             → Input completely disable.
+
+                             User edit nahi kar sakta.
+
+                             Form submit hone par
+                             disabled field backend ko nahi bheji jati.
+
+                             required
+                             → Disabled hone ki wajah se
+                               practically ignore ho jata hai.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Enter your Email:
+
+          </td>
+
+          <td>
+
+            <input type="email" name="email" required>
+
+            <!-- type="email"
+                             → Email Input.
+
+                             Browser basic email validation karta hai.
+
+                             Example:
+
+                             demo@gmail.com
+
+                             required
+                             → Email compulsory hai.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Enter your Gender:
+
+          </td>
+
+          <td>
+
+            <input type="radio" name="gen" id="male" />
+
+            <!-- type="radio"
+                             → Radio Button.
+
+                             name="gen"
+                             → Same name hone ki wajah se
+                               sirf ek option select hoga.
+
+                             id
+                             → Unique Identifier.
+                        -->
+
+            <label for="male">
+              Male
+            </label>
+
+            <!-- label
+
+                             for="male"
+                             → id="male" se connect hota hai.
+
+                             Label par click karne se bhi
+                             Radio Button select hota hai.
+                        -->
+
+
+
+            <input type="radio" name="gen" id="female" />
+
+            <label for="female">
+
+              Female
+
+            </label>
+
+
+
+            <input type="radio" name="gen" id="other" />
+
+            <label for="other">
+
+              Other
+
+            </label>
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Enter your Qualification:
+
+          </td>
+
+          <td>
+
+            <select>
+              <!-- select
+                             → Drop-down List.
+                        -->
+
+              <option disabled selected>
+
+                Select your Qualification
+
+              </option>
+
+              <!-- disabled
+                                 → Select nahi kar sakte.
+
+                                 selected
+                                 → Default option.
+                            -->
+
+              <option value="bca">
+
+                BCA
+
+              </option>
+
+              <!-- value
+                                 → Backend ko ye value bheji jayegi.
+                            -->
+
+              <option value="bsc">
+
+                BSC
+
+              </option>
+
+              <option selected value="B.Tech">
+
+                B.Tech
+
+              </option>
+
+              <option value="mba">
+
+                MBA
+
+              </option>
+
+              <option disabled value="mca">
+
+                MCA
+
+              </option>
+
+            </select>
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            University
+
+          </td>
+
+          <td>
+
+            <select>
+
+              <option disabled selected>
+
+                Select your University
+
+              </option>
+
+              <option value="Aktu">
+
+                AKTU
+
+              </option>
+
+              <option value="Jnu">
+
+                JNU
+
+              </option>
+
+              <option selected value="Iit">
+
+                IIT
+
+              </option>
+
+              <option value="Nit">
+
+                NIT
+
+              </option>
+
+              <option disabled value="HBTU">
+
+                HBTU
+
+              </option>
+
+            </select>
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Hobbies:
+
+          </td>
+
+          <td>
+
+            <input type="checkbox" name="hobby" id="cricket" />
+
+            <!-- type="checkbox"
+                             → Multiple options select karne ke liye.
+
+                             Radio Button se difference:
+
+                             Radio
+                             → Sirf ek select.
+
+                             Checkbox
+                             → Multiple select.
+                        -->
+
+            <label for="cricket">
+
+              Cricket
+
+            </label>
+
+
+
+            <input type="checkbox" name="hobby" id="football" />
+
+            <label for="football">
+
+              Football
+
+            </label>
+
+
+
+            <input type="checkbox" name="hobby" id="chess" />
+
+            <label for="chess">
+
+              Chess
+
+            </label>
+
+          </td>
+
+        </tr>
+        <tr>
+
+          <td>
+
+            Update your File:
+
+          </td>
+
+          <td>
+
+            <input name="profilePic" type="file" accept=".jpg, .jpeg, .png" />
+
+            <!-- type="file"
+                             → User ko file upload karne ki permission deta hai.
+
+                             name="profilePic"
+                             → Backend ko file "profilePic" key ke naam se milegi.
+
+                             accept
+                             → Sirf specified file types hi select kar sakte hain.
+
+                             .jpg
+                             .jpeg
+                             .png
+
+                             Sirf Image Files allow hongi.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Hidden Value:
+
+          </td>
+
+          <td>
+
+            <input name="hiddenValue" type="hidden" value="12345" />
+
+            <!-- type="hidden"
+                             → Browser me visible nahi hota.
+
+                             Hidden data backend ko bhejne ke liye use hota hai.
+
+                             Example:
+                             User ID
+                             Token
+                             Session ID
+
+                             value="12345"
+                             → Hidden value jo backend ko send hogi.
+                        -->
+
+          </td>
+
+        </tr>
+
+
+
+        <tr>
+
+          <td>
+
+            Range:
+
+          </td>
+
+          <td>
+
             <input name="range" type="range" min="0" max="100" />
+
+            <!-- type="range"
+                             → Slider Input create karta hai.
+
+                             User slider move karke value select karta hai.
+
+                             min="0"
+                             → Minimum value.
+
+                             max="100"
+                             → Maximum value.
+                        -->
+
           </td>
-               
-               <tr>
-                  <td>
-                    CGPA:
-                  </td>
+
+        </tr>
+
+
+
+        <tr>
 
           <td>
-             
+
+            CGPA:
+
+          </td>
+
+          <td>
+
             <input name="cgpa" type="number" min="0" max="10" step="0.01" />
-        
+
+            <!-- type="number"
+                             → Numeric Input.
+
+                             min="0"
+                             → Minimum value.
+
+                             max="10"
+                             → Maximum value.
+
+                             step="0.01"
+                             → Decimal values allow karta hai.
+
+                             Example:
+
+                             7.50
+                             7.75
+                             8.14
+                             9.25
+                        -->
+
           </td>
 
-               <tr> <td></td>
-                  <td colspan="2">
-                    <input type="submit" value="Register"/>
-                    <input type="reset" value="reset"/>
-                    
-
-                    <button type="button">&#128190;</button>
+        </tr>
 
 
 
-                  </td>
+        <tr>
 
-          <td>
-             
-            
-        
+          <td></td>
+
+          <td colspan="2">
+            <!-- colspan="2"
+                         → Ye cell 2 columns ko merge karega.
+                    -->
+
+            <input type="submit" value="Register" />
+
+            <!-- type="submit"
+                             → Form submit karta hai.
+
+                             value
+                             → Button par dikhne wala text.
+                        -->
+
+
+
+            <input type="reset" value="Reset" />
+
+            <!-- type="reset"
+                             → Form ke saare input fields
+                               default value par reset kar deta hai.
+                        -->
+
+
+
+            <button type="button">
+
+              &#128190;
+
+            </button>
+
+            <!-- button
+                             → HTML Button.
+
+                             type="button"
+                             → Normal Button.
+
+                             Agar type="submit" hota
+                             to form submit ho jata.
+
+                             &#128190;
+                             → Floppy Disk Emoji (💾)
+
+                             Save Button ki tarah use kiya gaya hai.
+                        -->
+
           </td>
 
+        </tr>
 
-               
-
-               
-                
-
-
-
-               </tr>
-
-          </tbody>
-
-
+      </tbody>
 
     </table>
+
+  </form>
+  <!-- form close.
+         Iske baad form ka data collect hona band ho jata hai.
+    -->
+
 </body>
+
 </html>
-
-
-
-<!-- this is the URL with query parameters
- this is get method that's why its shows credentials
- if i use post method then does not show credentials  -->
-
-http://127.0.0.1:5500/html%20practice/Days4/02_get_post.html?name=SHADAB+FIROZ&pwd=&dob=2026-06-09&mobile=856320&email=shdbfrz%40gmail.com&profilePic=&hiddenValue=12345&range=50&cgpa=7.6

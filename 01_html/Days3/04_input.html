@@ -5,91 +5,265 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <table  align="center" border="3" width="500px" >
-          <tbody >
-           <tr>
 
-            <td>
-             Enter your name:
-            </td>
-               <td>
-                 <input type="text">
-               </td>  </tr> 
-               <tr>
-              <td>
-                 enter the password:
-              </td>
-              <td>
-                 
-                <input type="password">
-              </td>  </tr>
-              <tr>
-            <td>
+    <table align="center" border="3" width="500px">
+    <!-- table = Form ko table layout me arrange karne ke liye use ki gayi hai.
 
-             Date of birth:
-            </td>
-               <td>
-                 <input type="date" min="2026-05-25" max="2026-06-25">
-               </td>
-              </tr>
-             <tr>
+         align="center"
+         → Table ko center me rakhta hai. (Deprecated)
 
-            <td>
-             Enter your Mobile number:
-            </td>
-               <td>
-                 <input type="number">
-               </td>  </tr> 
+         border="3"
+         → Table border ki thickness 3px.
+
+         width="500px"
+         → Table ki fixed width 500px.
+    -->
+
+        <tbody>
+        <!-- tbody = Table ke main data ko group karta hai. -->
+
+            <tr>
+            <!-- First Row -->
+
+                <td>
+                    Enter your name:
+                </td>
+
+                <td>
+
+                    <input type="text">
+                    <!-- input = User se data lene ke liye use hota hai.
+
+                         type="text"
+                         → Single line text input field create karta hai.
+
+                         Example:
+                         Name, City, College, etc.
+                    -->
+
+                </td>
+
+            </tr>
+
+
 
             <tr>
 
-            <td>
-             Enter your Email:
-            </td>
-               <td>
-                 <input type="email">
-               </td>  </tr> 
+                <td>
+                    Enter the password:
+                </td>
 
-           <tr>
+                <td>
 
-            <td>
-             Enter your gender:
-            </td>
-               <td>
-                 <input type="radio" name="gen" id="male"/>
-                 <label for="male"> Male</label>
-                 <input type="radio" name="gen" id="female"/>
-                 <label for="female"> Female</label>
-                 <input type="radio" name="gen" id="other"/>
-                 <label for="other"> Other</label>
-                
-               </td>  </tr> 
+                    <input type="password">
+                    <!-- type="password"
 
-          <tr>
+                         Password enter karne ke liye use hota hai.
 
-            <td>
-             Enter your Qualification:
-            </td>
-               <td>
-                 <select>
-                    <option disabled selected >Select your Qualification</option>
-                    <option value="bca">BCA</option>
-                    <option value="bsc">BSC</option>
-                    <option selected value="B.Tech">B.Tech</option>
-                    <option value="mba">MBA</option>
-                    <option disabled value="mca">MCA</option>
-                 </select>
+                         User jo type karta hai
+                         wo dots (••••••) ya stars me hide ho jata hai.
+                    -->
 
+                </td>
 
-               </td>  </tr> 
+            </tr>
 
 
 
-          </tbody>
+            <tr>
+
+                <td>
+                    Date of Birth:
+                </td>
+
+                <td>
+
+                    <input type="date" min="2026-05-25" max="2026-06-25">
+                    <!-- type="date"
+
+                         Date Picker show karta hai.
+
+                         min
+                         → Is date se pehle ki date select nahi kar sakte.
+
+                         max
+                         → Is date ke baad ki date select nahi kar sakte.
+                    -->
+
+                </td>
+
+            </tr>
 
 
+
+            <tr>
+
+                <td>
+                    Enter your Mobile Number:
+                </td>
+
+                <td>
+
+                    <input type="number">
+                    <!-- type="number"
+
+                         Sirf numeric value enter karne ke liye.
+
+                         Browser Up/Down arrows bhi show kar sakta hai.
+                    -->
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    Enter your Email:
+                </td>
+
+                <td>
+
+                    <input type="email">
+                    <!-- type="email"
+
+                         Email input field.
+
+                         Browser basic email validation karta hai.
+
+                         Example:
+                         demo@gmail.com
+                    -->
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    Enter your Gender:
+                </td>
+
+                <td>
+
+                    <input type="radio" name="gen" id="male"/>
+                    <!-- type="radio"
+
+                         Radio Button create karta hai.
+
+                         name="gen"
+                         → Same name hone ki wajah se
+                           ek time par sirf ek option select hoga.
+
+                         id="male"
+                         → Unique identifier.
+                    -->
+
+                    <label for="male">Male</label>
+                    <!-- label
+
+                         for="male"
+                         → id="male" wale input se connect karta hai.
+
+                         Label par click karne se bhi
+                         Radio Button select ho jayega.
+                    -->
+
+
+
+                    <input type="radio" name="gen" id="female"/>
+
+                    <label for="female">Female</label>
+
+
+
+                    <input type="radio" name="gen" id="other"/>
+
+                    <label for="other">Other</label>
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    Enter your Qualification:
+                </td>
+
+                <td>
+
+                    <select>
+                    <!-- select
+
+                         Drop-down List create karta hai.
+                    -->
+
+                        <option disabled selected>
+                            Select your Qualification
+                        </option>
+                        <!-- option
+
+                             Drop-down ka ek option.
+
+                             disabled
+                             → Is option ko select nahi kar sakte.
+
+                             selected
+                             → Page load hote hi ye option show hoga.
+                        -->
+
+                        <option value="bca">
+                            BCA
+                        </option>
+                        <!-- value
+
+                             Form submit hone par
+                             backend ko ye value bheji jati hai.
+                        -->
+
+                        <option value="bsc">
+                            BSC
+                        </option>
+
+                        <option selected value="B.Tech">
+                            B.Tech
+                        </option>
+                        <!-- selected
+
+                             Default selected option.
+                        -->
+
+                        <option value="mba">
+                            MBA
+                        </option>
+
+                        <option disabled value="mca">
+                            MCA
+                        </option>
+                        <!-- disabled
+
+                             Is option ko select nahi kar sakte.
+                        -->
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+        </tbody>
 
     </table>
+
 </body>
 </html>
