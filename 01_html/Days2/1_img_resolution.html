@@ -1,28 +1,113 @@
-<!-- 
- 1-> resoultion img such as phone (576px-752px), laptop(992px-1199px) ,large devices (1200px), tablet (768px-991px) --
-        sol:
-           min-width=1200px then show large devices img(img1)
-           min-width=992px then show laptop img(img2)
-           min-width=768px then show tablet img(img3)
-           min-width=576px then show phone img(img4)
-  -->
+<!--
+    Topic: Responsive Images using <picture> Tag
 
+    Different screen sizes (Breakpoints)
 
+    Phone          : 576px - 767px
+    Tablet         : 768px - 991px
+    Laptop         : 992px - 1199px
+    Large Devices  : 1200px and above
+
+    Logic:
+    min-width:1200px  → Large Device Image
+    min-width:992px   → Laptop Image
+    min-width:768px   → Tablet Image
+    min-width:576px   → Phone Image
+
+    Browser hamesha upar se niche check karta hai.
+    Jo pehli media condition true hoti hai, usi image ko load karta hai.
+-->
 
 <!DOCTYPE html>
+<!-- HTML5 document declare karta hai.
+     Browser ko batata hai ki page HTML5 standard follow karega. -->
+
 <html lang="en">
+<!-- html = Root tag. Pura webpage isi ke andar hota hai.
+
+     lang="en"
+     Browser, Search Engine aur Screen Reader ko batata hai
+     ki webpage English language me hai.
+-->
+
 <head>
+    <!-- Head tag webpage ki metadata store karta hai.
+         Ye information browser use karta hai, user ko directly nahi dikhti.
+    -->
+
     <meta charset="UTF-8">
+    <!-- UTF-8 character encoding use karta hai.
+         Hindi, English, Symbols aur Emoji ko properly display karta hai.
+    -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive webpage ke liye important.
+
+         width=device-width
+         → Page ki width device ki width ke equal ho jayegi.
+
+         initial-scale=1.0
+         → Page 100% zoom se load hoga.
+    -->
+
     <title>Document</title>
+    <!-- Browser tab me dikhne wala title. -->
 </head>
+
 <body>
+    <!-- Body tag ke andar webpage ka visible content likha jata hai. -->
+
     <picture>
+        <!-- picture tag multiple images ko manage karta hai.
+
+             Different screen size ke hisaab se alag image show kar sakta hai.
+
+             Browser <source> tags ko sequence me check karta hai.
+             Jo pehli matching condition hoti hai wahi image load hoti hai.
+        -->
+
         <source media="(min-width: 1200px)" srcset="images/images.jpg">
+        <!-- source tag image provide karta hai.
+
+             media
+             → Condition check karta hai.
+
+             min-width:1200px
+             → Agar screen width 1200px ya usse zyada hai
+                to ye image load hogi.
+
+             srcset
+             → Image ka path batata hai.
+        -->
+
         <source media="(min-width: 992px)" srcset="images/images.jpg">
+        <!-- Agar upar wali condition false ho aur
+             screen 992px ya usse badi ho,
+             to ye image load hogi.
+        -->
+
         <source media="(min-width: 768px)" srcset="images/images.jpg">
+        <!-- Tablet size ke liye image. -->
+
         <source media="(min-width: 576px)" srcset="images/images.jpg">
+        <!-- Phone size ke liye image. -->
+
         <img src="images/images.jpg" alt="Description">
-        </picture>
+        <!-- img = Fallback image.
+
+             Agar browser picture/source support na kare
+             ya koi media condition match na kare,
+             to ye image display hogi.
+
+             src
+             → Default image ka path.
+
+             alt
+             → Agar image load na ho to ye text show hoga.
+             Screen readers bhi isi text ko read karte hain.
+        -->
+
+    </picture>
+
 </body>
 </html>

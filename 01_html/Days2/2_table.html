@@ -1,84 +1,203 @@
-<!-- Tag	Descriptionn 
+<!--
+===================== HTML TABLE TAGS =====================
 
- <table>	  Defines a table
-<th>	      Defines a header cell in a table
-<tr>	      Defines a row in a table
-<td>	      Defines a cell in a table
-<caption>	  Defines a table caption
-<colgroup>	Specifies a group of one or more columns in a table for formatting
-<col>	      Specifies column properties for each column within a <colgroup> element
-<thead>	    Groups the header content in a table
-<tbody>	    Groups the body content in a table
-<tfoot>	    Groups the footer content in a table -->
+<table>      → Table create karta hai.
+<tr>         → Table Row (Ek horizontal row banata hai).
+<th>         → Table Header Cell (Heading ko bold aur center me dikhata hai).
+<td>         → Table Data Cell (Actual data store karta hai).
+<caption>    → Table ka title/caption deta hai.
+<colgroup>   → Multiple columns ko ek group me format karne ke liye.
+<col>        → Individual column ki properties set karta hai.
+<thead>      → Table ke header section ko group karta hai.
+<tbody>      → Table ke main data ko group karta hai.
+<tfoot>      → Table ke footer/summary ko group karta hai.
 
-
+===========================================================
+-->
 
 <!DOCTYPE html>
+<!-- Browser ko batata hai ki ye HTML5 document hai. -->
+
 <html lang="en">
+<!-- Root tag. Pura webpage isi ke andar hota hai. -->
+
 <head>
+<!-- Webpage ki metadata yaha hoti hai. -->
+
     <meta charset="UTF-8">
+    <!-- UTF-8 encoding. Hindi, English aur Emoji properly display hote hain. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Webpage ko responsive banata hai. -->
+
     <title>Document</title>
+    <!-- Browser tab ka title. -->
+
 </head>
+
 <center>
+<!-- Table ko page ke center me laata hai.
+
+     ⚠ Deprecated Tag
+     Aajkal CSS (text-align:center / flexbox) use kiya jata hai.
+-->
+
 <table align="center" border="10" cellpadding="10" cellspacing="0" bgcolor="lightblue" text="blue" background="images/images.jpg">
+<!-- table = Complete table create karta hai.
+
+     align="center"
+     → Table ko center me laata hai.
+     (Deprecated)
+
+     border="10"
+     → Table border ki thickness 10px.
+
+     cellpadding="10"
+     → Cell ke andar content aur border ke beech 10px space.
+
+     cellspacing="0"
+     → Do cells ke beech ka gap 0 karega.
+
+     bgcolor="lightblue"
+     → Table ka background color.
+     (Deprecated)
+
+     text="blue"
+     → ⚠ Table tag me valid attribute nahi hai.
+     Iska koi effect nahi hoga.
+
+     background="images/images.jpg"
+     → Table ke background me image lagata hai.
+     (Deprecated)
+-->
+
   <!-- Header Row Group -->
   <thead>
+  <!-- Table ke header section ko group karta hai.
+       Iske andar generally <th> use hota hai.
+  -->
+
     <tr>
+    <!-- tr = Table Row.
+         Ek horizontal row banata hai.
+    -->
+
       <th>Serial No.</th>
+      <!-- th = Table Heading Cell.
+           Automatically bold aur center aligned hota hai.
+      -->
+
       <th>Name </th>
+      <!-- Name column ki heading. -->
+
       <th>branch</th>
+      <!-- Branch column ki heading. -->
+
       <th>Roll No.</th>
+      <!-- Roll Number column ki heading. -->
+
       <th>College</th>
+      <!-- College column ki heading. -->
+
       <th>SGPA</th>
+      <!-- SGPA column ki heading. -->
 
     </tr>
+
   </thead>
 
   <!-- Body Row Group (Main Content) -->
   <tbody>
+  <!-- Table ka main data isi section me likha jata hai. -->
+
     <tr>
+    <!-- First Data Row -->
+
       <td>1</td>
+      <!-- td = Table Data Cell.
+           Row ka actual data store karta hai.
+      -->
+
       <td>Shadab Firoz </td>
+
       <td>AIML</td>
+
       <td>128</td>
+
       <td>AIT</td>
+
       <td>8.14</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Umar Farooque</td>
-      <td>AIML</td>
-      <td>151</td>
-      <td>AIT</td>
-      <td>8.19</td>
-      
-    </tr>
-<tr>
-      <td>3</td>
-      <td>Abu Saad</td>
-      <td>AIML</td>
-      <td>008</td>
-      <td>AIT</td>
-      <td>7.5</td>
+
     </tr>
 
+    <tr>
+    <!-- Second Data Row -->
+
+      <td>2</td>
+
+      <td>Umar Farooque</td>
+
+      <td>AIML</td>
+
+      <td>151</td>
+
+      <td>AIT</td>
+
+      <td>8.19</td>
+
+    </tr>
+
+    <tr>
+    <!-- Third Data Row -->
+
+      <td>3</td>
+
+      <td>Abu Saad</td>
+
+      <td>AIML</td>
+
+      <td>008</td>
+
+      <td>AIT</td>
+
+      <td>7.5</td>
+
+    </tr>
 
   </tbody>
 
   <!-- Footer Row Group (Totals/Summary) -->
   <tfoot>
+  <!-- Table ke footer ya summary data ko group karta hai.
+
+       Generally Total, Average, Final Result, etc. ke liye use hota hai.
+  -->
+
     <tr>
+
       <td>4</td>
+
       <td>Salman Ali</td>
+
       <td>AIML</td>
+
       <td>118</td>
+
       <td>AIT</td>
+
       <td>7.6</td>
+
     </tr>
+
   </tfoot>
+
 </table>
+
 </center>
+<!-- Center tag close. -->
 
 </body>
+<!-- Body tag close. -->
+
 </html>
+<!-- HTML document close. -->

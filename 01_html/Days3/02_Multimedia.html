@@ -5,26 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
 
-
-    
     <video width="320" height="240" controls>
+    <!-- video = Browser me video play karne ke liye use hota hai.
+
+         width="320"
+         → Video ki width 320px.
+
+         height="240"
+         → Video ki height 240px.
+
+         controls
+         → Browser default video controls show karega.
+            (Play, Pause, Volume, Full Screen, Progress Bar)
+    -->
+
         <source src="../Multimedia/file_example_MP4_640_3MG.mp4"/>
-        </video>  
-           <video width="320" height="240" controls    poster="../images/images.jpg"      >
+        <!-- source = Video file ka path provide karta hai.
+
+             src
+             → Video file ki location.
+
+             Browser supported format ke according file load karta hai.
+        -->
+
+    </video>
+
+
+
+    <video width="320" height="240" controls poster="../images/images.jpg">
+    <!-- Dusra Video Player
+
+         poster
+         → Video play hone se pehle preview image show karta hai.
+
+         Jab tak user Play button nahi dabata,
+         tab tak ye image display hoti hai.
+    -->
+
         <source src="../Multimedia/file_example_MP4_640_3MG.mp4"/>
-        </video>  
+        <!-- Video Source -->
+
+    </video>
 
 
-        
-        <audio controls
-        <source src="../Multimedia/sample-9s.mp3"/>       
 
+    <audio controls>
+    <!-- audio = Browser me audio/music play karne ke liye use hota hai.
 
-        
-   
-        
+         controls
+         → Browser default audio controls show karega.
+            (Play, Pause, Volume, Progress Bar)
+    -->
+
+        <source src="../Multimedia/sample-9s.mp3"/>
+        <!-- source = Audio file ka path provide karta hai.
+
+             src
+             → Audio file ki location.
+        -->
+
+    </audio>
+
 </body>
 </html>

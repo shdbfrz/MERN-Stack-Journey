@@ -5,32 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Page Layout</title>
 </head>
+
 <body>
-         <table border="1" width="100%">
-            <tr>
-                <td colspan="2" height="100px" align="center">Header</td>
-            </tr>
-            <tr>
-                <td width="20%" valign="top">
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                    </ul>
-                </td>
-                <td valign="top">
-                   <td valign="top">
-    <h1>Welcome to My Website</h1>
 
-                <img src="\images\images.jpg" width="100%" alt="Image">
+    <table border="1" width="100%">
+    <!-- table = Complete webpage layout banane ke liye use ki gayi hai.
 
-    <p>This is a sample web page layout using HTML tables.</p>
-</td>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" height="50px" align="center">Footer</td>
-            </tr>
-    
+         border="1"
+         → Table ka border 1px hoga.
+
+         width="100%"
+         → Table browser ki poori width cover karegi.
+
+         Note:
+         Modern websites me layout ke liye Table nahi,
+         Flexbox aur CSS Grid use kiye jate hain.
+    -->
+
+        <tr>
+        <!-- First Row -->
+
+            <td colspan="2" height="100px" align="center">
+            <!-- td = Table Data Cell.
+
+                 colspan="2"
+                 → Ye cell 2 columns ko merge karega.
+
+                 height="100px"
+                 → Cell ki height 100px.
+
+                 align="center"
+                 → Content ko horizontally center karega.
+                 (Deprecated)
+            -->
+
+                Header
+
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+        <!-- Second Row -->
+
+            <td width="20%" valign="top">
+            <!-- Left Side Menu
+
+                 width="20%"
+                 → Left column table ki 20% width lega.
+
+                 valign="top"
+                 → Content vertically top se start hoga.
+                 (Deprecated)
+            -->
+
+                <ul>
+                <!-- ul = Unordered List.
+                     Bullet list banata hai.
+                -->
+
+                    <li>Home</li>
+                    <!-- li = List Item -->
+
+                    <li>About</li>
+                    <!-- li = List Item -->
+
+                    <li>Contact</li>
+                    <!-- li = List Item -->
+
+                </ul>
+
+            </td>
+
+
+
+            <td valign="top">
+            <!-- Right Side Content Area
+
+                 valign="top"
+                 → Content vertically top se start hoga.
+                 (Deprecated)
+            -->
+
+                <h1>Welcome to My Website</h1>
+                <!-- Main Heading -->
+
+                <img src="/images/images.jpg" width="100%" alt="Image">
+                <!-- img = Image display karta hai.
+
+                     src
+                     → Image ka path.
+
+                     width="100%"
+                     → Image parent container ki poori width cover karegi.
+
+                     alt
+                     → Agar image load na ho to alternative text show hoga.
+                     Accessibility ke liye bhi important hai.
+                -->
+
+                <p>This is a sample web page layout using HTML tables.</p>
+                <!-- p = Paragraph.
+                     Normal text ya description likhne ke liye use hota hai.
+                -->
+
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+        <!-- Third Row -->
+
+            <td colspan="2" height="50px" align="center">
+            <!-- colspan="2"
+                 → Footer dono columns ko merge karega.
+
+                 height="50px"
+                 → Footer ki height.
+
+                 align="center"
+                 → Text ko center me karega.
+                 (Deprecated)
+            -->
+
+                Footer
+
+            </td>
+
+        </tr>
+
+    </table>
+
 </body>
 </html>
